@@ -1,0 +1,75 @@
+﻿@model CentumWebApplication.Models.FormPersonalInfo
+
+@{
+    bool applicant = Model.type == "applicant";
+}
+
+@*<div class="form-group col-md-6">
+        @Html.LabelFor(m => m.language)
+        @Html.ValidationMessageFor(m => m.language, null, new { @class = "help-block" })
+        @foreach (var item in Model.languageTypes)
+                {
+            <div class="radio">
+                <label class="form-inline">@Html.RadioButtonFor(m => m.language, item.Value) @item.Text</label>
+            </div>
+        }
+    </div>*@
+
+@Html.HiddenFor(m => m.language)
+
+<div class="form-group col-sm-4">
+    @Html.LabelFor(m => m.title)
+    @if (applicant)
+    {
+        @Html.DropDownListFor(m => m.title, Model.titleTypes, new { @class = "form-control", required = "required", data_val = "true", data_required = "true", min = "0" })
+    }
+    else
+    {
+        @Html.DropDownListFor(m => m.title, Model.titleTypes, new { @class = "form-control" })
+    }
+    @Html.ValidationMessageFor(m => m.title, null, new { @class = "help-block" })
+</div>
+<div class="form-group col-sm-4">
+    @Html.LabelFor(m => m.firstName)
+    @if (applicant)
+    {
+        @Html.EditorFor(m => m.firstName, new { htmlattributes = new { @class = "form-control", required = "required" } })
+    }
+    else
+    {
+        @Html.EditorFor(m => m.firstName, new { htmlattributes = new { @class = "form-control" } })
+    }
+    @Html.ValidationMessageFor(m => m.firstName, null, new { @class = "help-block" })
+</div>
+
+<div class="form-group col-sm-4">
+    @Html.LabelFor(m => m.lastName)
+    @if (applicant)
+    {
+        @Html.EditorFor(m => m.lastName, new { htmlattributes = new { @class = "form-control", required = "required" } })
+    }
+    else
+    {
+        @Html.EditorFor(m => m.lastName, new { htmlattributes = new { @class = "form-control" } })
+    }
+    @Html.ValidationMessageFor(m => m.lastName, null, new { @class = "help-block" })
+</div>
+<div class="clearfix"></div>
+<div class="form-group col-sm-6">
+    @Html.LabelFor(m => m.homePhone)
+    @Html.EditorFor(m => m.homePhone, new { htmlattributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(m => m.homePhone, null, new { @class = "help-block" })
+</div>
+<div class="form-group col-sm-6">
+    @Html.LabelFor(m => m.email)
+    @if (applicant)
+    {
+        @Html.EditorFor(m => m.email, new { htmlattributes = new { @class = "form-control", required = "required" } })
+    }
+    else
+    {
+        @Html.EditorFor(m => m.email, new { htmlattributes = new { @class = "form-control" } })
+    }
+</div>
+
+<div class="clearfix"></div>

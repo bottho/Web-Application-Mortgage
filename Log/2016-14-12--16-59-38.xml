@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:referralApplication xmlns:xs="http://www.filogix.com/Schema/FCXAPI/1">
+  <xs:referredToAgent>
+    <xs:firmCode>CNTM</xs:firmCode>
+    <xs:userLogin>TESTJ</xs:userLogin>
+  </xs:referredToAgent>
+  <xs:referralUrl>dev.centum.ca</xs:referralUrl>
+  <xs:deal>
+    <xs:applicationDate>2016-12-14T16:59:35.7523325+01:00</xs:applicationDate>
+    <xs:dealTypeDd>0</xs:dealTypeDd>
+    <xs:sourceApplicationId>CNTMTESTJ201612141659357523</xs:sourceApplicationId>
+  </xs:deal>
+  <xs:applicantGroup>
+    <xs:applicantGroupTypeDd>0</xs:applicantGroupTypeDd>
+    <xs:applicant>
+      <xs:emailAddress>bryanottho@gmail.com</xs:emailAddress>
+      <xs:emailNotProvided>N</xs:emailNotProvided>
+      <xs:name>
+        <xs:salutationDd>1</xs:salutationDd>
+        <xs:firstName>Bryan</xs:firstName>
+        <xs:lastName>Ottho</xs:lastName>
+      </xs:name>
+      <xs:addressDetail>
+        <xs:address>
+          <xs:streetNumber>123</xs:streetNumber>
+          <xs:streetName>Abbott</xs:streetName>
+          <xs:city>Vancouver</xs:city>
+          <xs:provinceDd>2</xs:provinceDd>
+          <xs:internationalPostalCode>V6B 0J2</xs:internationalPostalCode>
+          <xs:countryTypeDd>1</xs:countryTypeDd>
+        </xs:address>
+        <xs:addressTypeDd>0</xs:addressTypeDd>
+      </xs:addressDetail>
+      <xs:employmentHistory>
+        <xs:employerName>Bryan Ottho</xs:employerName>
+        <xs:employmentHistoryStatusDd>0</xs:employmentHistoryStatusDd>
+        <xs:income>
+          <xs:incomeAmount>0</xs:incomeAmount>
+          <xs:incomePeriodDd>0</xs:incomePeriodDd>
+          <xs:incomeTypeDd>0</xs:incomeTypeDd>
+        </xs:income>
+        <xs:industrySectorDd>1</xs:industrySectorDd>
+      </xs:employmentHistory>
+    </xs:applicant>
+  </xs:applicantGroup>
+</xs:referralApplication>

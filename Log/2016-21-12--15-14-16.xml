@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:referralApplication xmlns:xs="http://www.filogix.com/Schema/FCXAPI/1">
+  <xs:referredToAgent>
+    <xs:firmCode>CNTM</xs:firmCode>
+    <xs:userLogin>TESTJ123</xs:userLogin>
+  </xs:referredToAgent>
+  <xs:referralUrl>dev.centum.ca</xs:referralUrl>
+  <xs:deal>
+    <xs:applicationDate>2016-12-21T15:14:12.0156905-08:00</xs:applicationDate>
+    <xs:dealPurposeDd>0</xs:dealPurposeDd>
+    <xs:dealTypeDd>0</xs:dealTypeDd>
+    <xs:estimatedClosingDate>2016-12-22T00:00:00</xs:estimatedClosingDate>
+    <xs:sourceApplicationId>CNTM201612211514120161</xs:sourceApplicationId>
+  </xs:deal>
+  <xs:applicantGroup>
+    <xs:applicantGroupTypeDd>0</xs:applicantGroupTypeDd>
+    <xs:applicant>
+      <xs:emailAddress>bryanottho@gmail.com</xs:emailAddress>
+      <xs:emailNotProvided>N</xs:emailNotProvided>
+      <xs:languagePreferenceDd>0</xs:languagePreferenceDd>
+      <xs:name>
+        <xs:salutationDd>1</xs:salutationDd>
+        <xs:firstName>Bryan</xs:firstName>
+        <xs:lastName>Ottho</xs:lastName>
+      </xs:name>
+      <xs:addressDetail>
+        <xs:address>
+          <xs:streetNumber>123</xs:streetNumber>
+          <xs:streetName>Abbott</xs:streetName>
+          <xs:city>Vancouver</xs:city>
+          <xs:provinceDd>2</xs:provinceDd>
+          <xs:internationalPostalCode>V6B 0J2</xs:internationalPostalCode>
+          <xs:postalFsa>V6B</xs:postalFsa>
+          <xs:postalLdu>0J2</xs:postalLdu>
+          <xs:countryTypeDd>1</xs:countryTypeDd>
+        </xs:address>
+        <xs:addressTypeDd>0</xs:addressTypeDd>
+      </xs:addressDetail>
+      <xs:employmentHistory>
+        <xs:contact>
+          <xs:address>
+            <xs:addressLine1>Vorbergstraße 9B</xs:addressLine1>
+            <xs:city>Berlin</xs:city>
+            <xs:provinceDd>9</xs:provinceDd>
+            <xs:internationalPostalCode>10823</xs:internationalPostalCode>
+            <xs:countryTypeDd>1</xs:countryTypeDd>
+          </xs:address>
+        </xs:contact>
+        <xs:employerName>Bryan Ottho</xs:employerName>
+        <xs:employmentHistoryStatusDd>0</xs:employmentHistoryStatusDd>
+        <xs:income>
+          <xs:incomeAmount>0</xs:incomeAmount>
+          <xs:incomePeriodDd>0</xs:incomePeriodDd>
+          <xs:incomeTypeDd>0</xs:incomeTypeDd>
+        </xs:income>
+        <xs:occupationDd>2</xs:occupationDd>
+      </xs:employmentHistory>
+    </xs:applicant>
+  </xs:applicantGroup>
+  <xs:mortgage>
+    <xs:netLoanAmount>0</xs:netLoanAmount>
+    <xs:rate />
+  </xs:mortgage>
+  <xs:subjectProperty>
+    <xs:property>
+      <xs:address>
+        <xs:streetNumber>100</xs:streetNumber>
+        <xs:streetName>2nd Street</xs:streetName>
+        <xs:city>Berlin</xs:city>
+        <xs:internationalPostalCode>V6B 0J2</xs:internationalPostalCode>
+        <xs:postalFsa>V6B</xs:postalFsa>
+        <xs:postalLdu>0J2</xs:postalLdu>
+        <xs:countryTypeDd>1</xs:countryTypeDd>
+      </xs:address>
+      <xs:dwellingStyleDd>0</xs:dwellingStyleDd>
+      <xs:dwellingTypeDd>0</xs:dwellingTypeDd>
+      <xs:occupancyTypeDd>0</xs:occupancyTypeDd>
+    </xs:property>
+  </xs:subjectProperty>
+</xs:referralApplication>

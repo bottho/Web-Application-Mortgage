@@ -1,0 +1,63 @@
+﻿@model CentumWebApplication.Models.FormEmploymentAddress
+
+@{
+    bool required = Model.type == "applicant";
+}
+
+<div class="form-group col-md-4">
+    @Html.LabelFor(m => m.addressLine1)
+    @Html.ValidationMessageFor(m => m.addressLine1, null, new { @class = "help-block" })
+    @if (required)
+    {
+        @Html.EditorFor(m => m.addressLine1, new { htmlattributes = new { @class = "form-control", required = "required" } })
+    }
+    else
+    {
+        @Html.EditorFor(m => m.addressLine1, new { htmlattributes = new { @class = "form-control required" } })
+    }
+</div>
+
+<div class="form-group col-md-2">
+    @Html.LabelFor(m => m.addressLine2)
+    @Html.ValidationMessageFor(m => m.addressLine2, null, new { @class = "help-block" })
+    @Html.EditorFor(m => m.addressLine2, new { htmlattributes = new { @class = "form-control" } })
+</div>
+
+<div class="form-group col-md-4">
+    @Html.LabelFor(m => m.city)
+    @Html.ValidationMessageFor(m => m.city, null, new { @class = "help-block" })
+    @if (required)
+    {
+        @Html.EditorFor(m => m.city, new { htmlattributes = new { @class = "form-control", required = "required" } })
+    }
+    else
+    {
+        @Html.EditorFor(m => m.city, new { htmlattributes = new { @class = "form-control required" } })
+    }
+</div>
+
+<div class="form-group col-md-4">
+    @Html.LabelFor(m => m.province)
+    @Html.ValidationMessageFor(m => m.province, null, new { @class = "help-block" })
+    @if (required)
+    {
+        @Html.DropDownListFor(m => m.province, Model.provinceList, new { @class = "form-control", required = "required", min = "0" })
+    }
+    else
+    {
+        @Html.DropDownListFor(m => m.province, Model.provinceList, new { @class = "form-control required" })
+    }
+</div>
+
+<div class="form-group col-md-4">
+    @Html.LabelFor(m => m.postalCode)
+    @Html.ValidationMessageFor(m => m.postalCode, null, new { @class = "help-block" })
+    @if (required)
+    {
+        @Html.EditorFor(m => m.postalCode, new { htmlattributes = new { @class = "form-control", required = "required" } })
+    }
+    else
+    {
+        @Html.EditorFor(m => m.postalCode, new { htmlattributes = new { @class = "form-control required" } })
+    }
+</div>

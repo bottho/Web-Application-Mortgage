@@ -1,0 +1,43 @@
+﻿@model CentumWebApplication.Models.FormViewModel
+@{
+    ViewBag.Title = "Home Page";
+}
+
+@using (Html.BeginRouteForm("FormSubmit"))
+{
+    @Html.HiddenFor(m => m.user.AgentEmail)
+    @Html.HiddenFor(m => m.sentIntro)
+    @Html.HiddenFor(m => m.firmCode)
+    @Html.HiddenFor(m => m.userName)
+
+    if (Model.user != null)
+    {
+        <h2>@Model.user.OfficeName</h2>
+        <h3>@Model.user.NameFirst @Model.user.NameLast</h3>
+    }
+
+    <div class="col-lg-2 col-sm-12 left">
+        <ul id="tabNav" class="nav nav-pills nav-stacked">
+            <li class="active"><a data-toggle="tab" href="#Intro" onclick="tabClick('#Intro')">@Resources.MenuInterface.introduction</a></li>
+            <li><a data-toggle="tab" href="#Qualifiers" onclick="tabClick('#Qualifiers')">@Resources.MenuInterface.qualifiers</a></li>
+            <li><a data-toggle="tab" href="#Personal" onclick="tabClick('#Personal')">@Resources.MenuInterface.personalInfo</a></li>
+            <li id="coAplicantTab" class="hidden"><a data-toggle="tab" href="#CoApplicant" onclick="tabClick('#CoApplicant')">@Resources.MenuInterface.coApplicant</a></li>
+            <li><a data-toggle="tab" href="#Property" onclick="tabClick('#Property')">@Resources.MenuInterface.propertyInfo</a></li>
+            <li><a data-toggle="tab" href="#Financial" onclick="tabClick('#Financial')">@Resources.MenuInterface.financialInfo</a></li>
+            <li><a data-toggle="tab" href="#Misc" onclick="tabClick('#Misc')">@Resources.MenuInterface.miscInfo</a></li>
+        </ul>
+    </div>
+    <div class="container col-lg-10 col-sm-12">
+
+        @Html.ValidationSummary()
+
+        @if (TempData["success"] != null)
+        {
+            <h3>@TempData["success"]</h3>
+        }
+        else
+        {
+            @Html.Partial("tabContent")
+        }
+    </div>
+}

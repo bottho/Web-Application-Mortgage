@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="age" xml:space="preserve">
+    <value>Age:</value>
+  </data>
+  <data name="apartmentHighRise" xml:space="preserve">
+    <value>Apartment High Rise</value>
+  </data>
+  <data name="apartmentLowRise" xml:space="preserve">
+    <value>Apartment Low Rise</value>
+  </data>
+  <data name="attached" xml:space="preserve">
+    <value>Attached</value>
+  </data>
+  <data name="biLevel" xml:space="preserve">
+    <value>Bi-Level</value>
+  </data>
+  <data name="detached" xml:space="preserve">
+    <value>Detached</value>
+  </data>
+  <data name="doubleGarage" xml:space="preserve">
+    <value>Double</value>
+  </data>
+  <data name="duplexDetached" xml:space="preserve">
+    <value>Duplex Detatched</value>
+  </data>
+  <data name="duplexSemiDetached" xml:space="preserve">
+    <value>Duples Semi Detatched</value>
+  </data>
+  <data name="dwellingStyle" xml:space="preserve">
+    <value>Dwelling Style:</value>
+  </data>
+  <data name="estimatedMonthlyCondoFees" xml:space="preserve">
+    <value>Estimated Monthly Condo Fees:</value>
+  </data>
+  <data name="estimatedMonthlyHeating" xml:space="preserve">
+    <value>Estimated Monthly Heating:</value>
+  </data>
+  <data name="estimatedPropertyTaxes" xml:space="preserve">
+    <value>Estimated Annual Property Taxes:</value>
+  </data>
+  <data name="fourPlexDetached" xml:space="preserve">
+    <value>Four Plex Detached</value>
+  </data>
+  <data name="fourPlexSemiDetached" xml:space="preserve">
+    <value>Four Plex Semi-Detached</value>
+  </data>
+  <data name="Ft" xml:space="preserve">
+    <value>Feet</value>
+  </data>
+  <data name="garageSize" xml:space="preserve">
+    <value>Garage Size:</value>
+  </data>
+  <data name="garageType" xml:space="preserve">
+    <value>Garage Type:</value>
+  </data>
+  <data name="livableAreaUnits" xml:space="preserve">
+    <value>Liveable Area Units:</value>
+  </data>
+  <data name="liveableArea" xml:space="preserve">
+    <value>Liveable Area:</value>
+  </data>
+  <data name="lotDepth" xml:space="preserve">
+    <value>Lot Depth:</value>
+  </data>
+  <data name="lotWidth" xml:space="preserve">
+    <value>Lot Width:</value>
+  </data>
+  <data name="M" xml:space="preserve">
+    <value>Meters</value>
+  </data>
+  <data name="mobile" xml:space="preserve">
+    <value>Mobile</value>
+  </data>
+  <data name="modularHomeDetached" xml:space="preserve">
+    <value>Modular Home Detached</value>
+  </data>
+  <data name="modularHomeSemiDetached" xml:space="preserve">
+    <value>Modular Home Semi-Detached</value>
+  </data>
+  <data name="noneGarage" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="occupiedBy" xml:space="preserve">
+    <value>Occupied By:</value>
+  </data>
+  <data name="oneStorey" xml:space="preserve">
+    <value>One Storey</value>
+  </data>
+  <data name="other" xml:space="preserve">
+    <value>Other</value>
+  </data>
+  <data name="ownerOccupied" xml:space="preserve">
+    <value>Owner Occupied</value>
+  </data>
+  <data name="ownerOccupiedRental" xml:space="preserve">
+    <value>Owner Occupied &amp; Rental</value>
+  </data>
+  <data name="pleaseSelect" xml:space="preserve">
+    <value>Please Select</value>
+  </data>
+  <data name="propertyType" xml:space="preserve">
+    <value>Property Type:</value>
+  </data>
+  <data name="rental" xml:space="preserve">
+    <value>Rental</value>
+  </data>
+  <data name="rowHousing" xml:space="preserve">
+    <value>Row Housing</value>
+  </data>
+  <data name="secondHome" xml:space="preserve">
+    <value>Second Home</value>
+  </data>
+  <data name="semiDetached" xml:space="preserve">
+    <value>Semi-Detached</value>
+  </data>
+  <data name="singleGarage" xml:space="preserve">
+    <value>Single</value>
+  </data>
+  <data name="splitLevel" xml:space="preserve">
+    <value>Split Level</value>
+  </data>
+  <data name="sqFt" xml:space="preserve">
+    <value>Sq Ft</value>
+  </data>
+  <data name="sqM" xml:space="preserve">
+    <value>Sq M</value>
+  </data>
+  <data name="stacked" xml:space="preserve">
+    <value>Stacked</value>
+  </data>
+  <data name="storeyAndAHalf" xml:space="preserve">
+    <value>Storey and a Half</value>
+  </data>
+  <data name="threeStorey" xml:space="preserve">
+    <value>Three Storey</value>
+  </data>
+  <data name="triPlexDetached" xml:space="preserve">
+    <value>Tri-Plex Detached</value>
+  </data>
+  <data name="triPlexSemiDetached" xml:space="preserve">
+    <value>Tri-Plex Semi-Detached</value>
+  </data>
+  <data name="trippleGarage" xml:space="preserve">
+    <value>Triple</value>
+  </data>
+  <data name="twoStorey" xml:space="preserve">
+    <value>Two Storey</value>
+  </data>
+  <data name="units" xml:space="preserve">
+    <value>Units:</value>
+  </data>
+  <data name="lotArea" xml:space="preserve">
+    <value>Lot Area:</value>
+  </data>
+</root>

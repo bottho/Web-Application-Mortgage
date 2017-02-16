@@ -1,0 +1,83 @@
+﻿@model CentumWebApplication.Models.FormPersonalInfo
+
+<div class="col-sm-12"><h4>Identification</h4></div>
+<div class="form-group col-sm-6">
+    @Html.LabelFor(m => m.title)
+    @Html.DropDownListFor(m => m.title, Model.titleTypes, new { @class = "form-control", required = "required" })
+    @Html.ValidationMessageFor(m => m.title, null, new { @class = "help-block" })
+</div>
+
+<div class="form-group col-sm-6">
+    @Html.LabelFor(m => m.firstName)
+    @Html.EditorFor(m => m.firstName, new { htmlattributes = new { @class = "form-control", required = "required" } })
+    @Html.ValidationMessageFor(m => m.firstName, null, new { @class = "help-block" })
+</div>
+
+<div class="form-group col-sm-6">
+    @Html.LabelFor(m => m.lastName)
+    @Html.EditorFor(m => m.lastName, new { htmlattributes = new { @class = "form-control", required = "required" } })
+    @Html.ValidationMessageFor(m => m.lastName, null, new { @class = "help-block" })
+</div>
+
+@*<div class="form-group col-sm-6">
+    @Html.LabelFor(m => m.initial)
+    @Html.EditorFor(m => m.initial, new { htmlattributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(m => m.initial, null, new { @class = "help-block" })
+</div>*@
+
+<div class="form-group col-sm-6">
+    @Html.LabelFor(m => m.dateOfBirth)
+    <div class="input-group date">
+        @Html.EditorFor(m => m.dateOfBirth, new { htmlattributes = new { @class = "form-control" } })
+        <span class="input-group-addon">
+            <span class="glyphicon glyphicon-calendar"></span>
+        </span>
+    </div>
+    @Html.ValidationMessageFor(m => m.dateOfBirth, null, new { @class = "help-block" })
+</div>
+
+<div class="form-group col-sm-2">
+    @Html.LabelFor(m => m.sin)
+    @Html.EditorFor(m => m.sin, new { htmlattributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(m => m.sin, null, new { @class = "help-block" })
+</div>
+
+<div class="form-group col-sm-6">
+    @Html.LabelFor(m => m.residentialStatus)
+    @Html.DropDownListFor(m => m.residentialStatus, Model.residentialStatusTypes, new { @class = "form-control" })
+    @Html.ValidationMessageFor(m => m.residentialStatus, null, new { @class = "help-block" })
+</div>
+
+<div class="form-group col-sm-4">
+    @Html.LabelFor(m => m.monthlyRent)
+    @Html.EditorFor(m => m.monthlyRent, new { htmlattributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(m => m.monthlyRent, null, new { @class = "help-block" })
+</div>
+
+<div class="form-group col-sm-6">
+    @Html.LabelFor(m => m.homePhone)
+    @Html.EditorFor(m => m.homePhone, new { htmlattributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(m => m.homePhone, null, new { @class = "help-block" })
+</div>
+
+<div class="form-group col-sm-6">
+    @Html.LabelFor(m => m.workPhone)
+    @Html.EditorFor(m => m.workPhone, new { htmlattributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(m => m.workPhone, null, new { @class = "help-block" })
+</div>
+
+<div class="form-group col-sm-6">
+    @Html.LabelFor(m => m.email)
+    @Html.EditorFor(m => m.email, new { htmlattributes = new { @class = "form-control", required = "required" } })
+    @Html.ValidationMessageFor(m => m.email, null, new { @class = "help-block" })
+</div>
+
+<div class="clearfix"></div>
+
+<div class="col-sm-12"><h4>Current Living Address</h4></div>
+@Html.EditorFor(m => m.currentAddress, "FormAddress")
+
+<div class="clearfix"></div>
+
+<div class="col-sm-12"><h4>Present Employer</h4></div>
+@Html.EditorFor(m => m.employer, "FormEmployer")

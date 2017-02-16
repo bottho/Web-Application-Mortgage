@@ -1,0 +1,384 @@
+﻿@model CentumWebApplication.Models.FormFinancialInfo
+<div class="col-sm-12"><h4>Assets</h4></div>
+<table class="table table-striped table-responsive">
+    <thead>
+        <tr>
+            <td>Type</td>
+            <td>Amount/Value</td>
+        </tr>
+    </thead>
+    <tr>
+        <td>
+            @Html.LabelFor(m => m.cashSavingsValue)
+        </td>
+        <td>
+            <div class="input-group date">
+                <span class="input-group-addon">$</span>
+                @Html.EditorFor(m => m.cashSavingsValue, new { htmlattributes = new { @class = "form-control", value = "0" } })
+            </div>
+            @Html.ValidationMessageFor(m => m.cashSavingsValue, null, new { @class = "help-block" })
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.LabelFor(m => m.depositValue)
+        </td>
+        <td>
+            <div class="input-group date">
+                <span class="input-group-addon">$</span>
+                @Html.EditorFor(m => m.depositValue, new { htmlattributes = new { @class = "form-control", value = "0" } })
+            </div>
+            @Html.ValidationMessageFor(m => m.depositValue, null, new { @class = "help-block" })
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.LabelFor(m => m.autoValue)
+        </td>
+        <td>
+            <div class="input-group date">
+                <span class="input-group-addon">$</span>
+                @Html.EditorFor(m => m.autoValue, new { htmlattributes = new { @class = "form-control", value = "0" } })
+            </div>
+            @Html.ValidationMessageFor(m => m.autoValue, null, new { @class = "help-block" })
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.LabelFor(m => m.currentPropertyValue)
+        </td>
+        <td>
+            <div class="input-group date">
+                <span class="input-group-addon">$</span>
+                @Html.EditorFor(m => m.currentPropertyValue, new { htmlattributes = new { @class = "form-control", value = "0" } })
+            </div>
+            @Html.ValidationMessageFor(m => m.currentPropertyValue, null, new { @class = "help-block" })
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.LabelFor(m => m.investmentValue)
+        </td>
+        <td>
+            <div class="input-group date">
+                <span class="input-group-addon">$</span>
+                @Html.EditorFor(m => m.investmentValue, new { htmlattributes = new { @class = "form-control", value = "0" } })
+            </div>
+            @Html.ValidationMessageFor(m => m.investmentValue, null, new { @class = "help-block" })
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.LabelFor(m => m.RRSPValue)
+        </td>
+        <td>
+            <div class="input-group date">
+                <span class="input-group-addon">$</span>
+                @Html.EditorFor(m => m.RRSPValue, new { htmlattributes = new { @class = "form-control", value = "0" } })
+            </div>
+            @Html.ValidationMessageFor(m => m.RRSPValue, null, new { @class = "help-block" })
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.LabelFor(m => m.otherValue)
+        </td>
+        <td>
+            <div class="input-group date">
+                <span class="input-group-addon">$</span>
+                @Html.EditorFor(m => m.otherValue, new { htmlattributes = new { @class = "form-control", value = "0" } })
+            </div>
+            @Html.ValidationMessageFor(m => m.otherValue, null, new { @class = "help-block" })
+        </td>
+    </tr>
+    @*<tr>
+        <td>
+            @Html.LabelFor(m => m.totalAssetValue)
+        </td>
+        <td>
+            <div class="input-group date">
+                <span class="input-group-addon">$</span>
+                @Html.EditorFor(m => m.totalAssetValue, new { htmlattributes = new { @class = "form-control", value = "0" } })
+            </div>
+            @Html.ValidationMessageFor(m => m.totalAssetValue, null, new { @class = "help-block" })
+        </td>
+    </tr>*@
+</table>
+
+<div class="clearfix"></div>
+
+<div class="col-sm-12"><h4>Liabilities</h4></div>
+<table class="table table-striped table-responsive">
+    <thead>
+        <tr>
+            <td>Type</td>
+            <td>Monthly Payment</td>
+            <td>Balance Owing</td>
+        </tr>
+    </thead>
+    <tr>
+        <td>
+            @Html.LabelFor(m => m.creditDesc)
+        </td>
+        <td>
+            <div class="input-group date">
+                <span class="input-group-addon">$</span>
+                @Html.EditorFor(m => m.creditMonthly, new { htmlattributes = new { @class = "form-control", value = "0" } })
+            </div>
+            @Html.ValidationMessageFor(m => m.creditMonthly, null, new { @class = "help-block" })
+        </td>
+        <td>
+            <div class="input-group date">
+                <span class="input-group-addon">$</span>
+                @Html.EditorFor(m => m.creditValue, new { htmlattributes = new { @class = "form-control", value = "0" } })
+            </div>
+            @Html.ValidationMessageFor(m => m.creditValue, null, new { @class = "help-block" })
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.LabelFor(m => m.debtsDesc)
+        </td>
+        <td>
+            <div class="input-group date">
+                <span class="input-group-addon">$</span>
+                @Html.EditorFor(m => m.debtsMonthly, new { htmlattributes = new { @class = "form-control", value = "0" } })
+            </div>
+            @Html.ValidationMessageFor(m => m.debtsMonthly, null, new { @class = "help-block" })
+        </td>
+        <td>
+            <div class="input-group date">
+                <span class="input-group-addon">$</span>
+                @Html.EditorFor(m => m.debtsValue, new { htmlattributes = new { @class = "form-control", value = "0" } })
+            </div>
+            @Html.ValidationMessageFor(m => m.debtsValue, null, new { @class = "help-block" })
+        </td>
+    </tr>
+    
+    <tr>
+        <td>
+            @Html.LabelFor(m => m.autoLoanDesc)
+        </td>
+        <td>
+            <div class="input-group date">
+                <span class="input-group-addon">$</span>
+                @Html.EditorFor(m => m.autoLoanMonthly, new { htmlattributes = new { @class = "form-control", value = "0" } })
+            </div>
+            @Html.ValidationMessageFor(m => m.autoLoanMonthly, null, new { @class = "help-block" })
+        </td>
+        <td>
+            <div class="input-group date">
+                <span class="input-group-addon">$</span>
+                @Html.EditorFor(m => m.autoLoanValue, new { htmlattributes = new { @class = "form-control", value = "0" } })
+            </div>
+            @Html.ValidationMessageFor(m => m.autoLoanValue, null, new { @class = "help-block" })
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.LabelFor(m => m.alimonyValue)
+        </td>
+        <td></td>
+        <td>
+            <div class="input-group date">
+                <span class="input-group-addon">$</span>
+                @Html.EditorFor(m => m.alimonyValue, new { htmlattributes = new { @class = "form-control", value = "0" } })
+            </div>
+            @Html.ValidationMessageFor(m => m.alimonyValue, null, new { @class = "help-block" })
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.LabelFor(m => m.childSupportValue)
+        </td>
+        <td></td>
+        <td>
+            <div class="input-group date">
+                <span class="input-group-addon">$</span>
+                @Html.EditorFor(m => m.childSupportValue, new { htmlattributes = new { @class = "form-control", value = "0" } })
+            </div>
+            @Html.ValidationMessageFor(m => m.childSupportValue, null, new { @class = "help-block" })
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.LabelFor(m => m.studentLoansDesc)
+        </td>
+        <td>
+            <div class="input-group date">
+                <span class="input-group-addon">$</span>
+                @Html.EditorFor(m => m.studentLoanMonthly, new { htmlattributes = new { @class = "form-control", value = "0" } })
+            </div>
+            @Html.ValidationMessageFor(m => m.studentLoanMonthly, null, new { @class = "help-block" })
+        </td>
+        <td>
+            <div class="input-group date">
+                <span class="input-group-addon">$</span>
+                @Html.EditorFor(m => m.studentLoanValue, new { htmlattributes = new { @class = "form-control", value = "0" } })
+            </div>
+            @Html.ValidationMessageFor(m => m.studentLoanValue, null, new { @class = "help-block" })
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.LabelFor(m => m.wageGarnishmentDesc)
+        </td>
+        <td>
+            <div class="input-group date">
+                <span class="input-group-addon">$</span>
+                @Html.EditorFor(m => m.wageGarnishmentMonthly, new { htmlattributes = new { @class = "form-control", value = "0" } })
+            </div>
+            @Html.ValidationMessageFor(m => m.wageGarnishmentMonthly, null, new { @class = "help-block" })
+        </td>
+        <td>
+            <div class="input-group date">
+                <span class="input-group-addon">$</span>
+                @Html.EditorFor(m => m.wageGarnishmentValue, new { htmlattributes = new { @class = "form-control", value = "0" } })
+            </div>
+            @Html.ValidationMessageFor(m => m.wageGarnishmentValue, null, new { @class = "help-block" })
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.LabelFor(m => m.otherLiabilityDesc)
+        </td>
+        <td>
+            <div class="input-group date">
+                <span class="input-group-addon">$</span>
+                @Html.EditorFor(m => m.otherLiabilityMonthly, new { htmlattributes = new { @class = "form-control", value = "0" } })
+            </div>
+            @Html.ValidationMessageFor(m => m.otherLiabilityMonthly, null, new { @class = "help-block" })
+        </td>
+        <td>
+            <div class="input-group date">
+                <span class="input-group-addon">$</span>
+                @Html.EditorFor(m => m.otherLiabilityValue, new { htmlattributes = new { @class = "form-control", value = "0" } })
+            </div>
+            @Html.ValidationMessageFor(m => m.otherLiabilityValue, null, new { @class = "help-block" })
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.LabelFor(m => m.unsecuredDesc)
+        </td>
+        <td>
+            <div class="input-group date">
+                <span class="input-group-addon">$</span>
+                @Html.EditorFor(m => m.unsecuredMonthly, new { htmlattributes = new { @class = "form-control", value = "0" } })
+            </div>
+            @Html.ValidationMessageFor(m => m.unsecuredMonthly, null, new { @class = "help-block" })
+        </td>
+        <td>
+            <div class="input-group date">
+                <span class="input-group-addon">$</span>
+                @Html.EditorFor(m => m.unsecuredValue, new { htmlattributes = new { @class = "form-control", value = "0" } })
+            </div>
+            @Html.ValidationMessageFor(m => m.unsecuredValue, null, new { @class = "help-block" })
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.LabelFor(m => m.incomeTaxDesc)
+        </td>
+        <td>
+            <div class="input-group date">
+                <span class="input-group-addon">$</span>
+                @Html.EditorFor(m => m.incomeTaxMonthly, new { htmlattributes = new { @class = "form-control", value = "0" } })
+            </div>
+            @Html.ValidationMessageFor(m => m.incomeTaxMonthly, null, new { @class = "help-block" })
+        </td>
+        <td>
+            <div class="input-group date">
+                <span class="input-group-addon">$</span>
+                @Html.EditorFor(m => m.incomeTaxValue, new { htmlattributes = new { @class = "form-control", value = "0" } })
+            </div>
+            @Html.ValidationMessageFor(m => m.incomeTaxValue, null, new { @class = "help-block" })
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.LabelFor(m => m.securedDesc)
+        </td>
+        <td>
+            <div class="input-group date">
+                <span class="input-group-addon">$</span>
+                @Html.EditorFor(m => m.securedMonthly, new { htmlattributes = new { @class = "form-control", value = "0" } })
+            </div>
+            @Html.ValidationMessageFor(m => m.securedMonthly, null, new { @class = "help-block" })
+        </td>
+        <td>
+            <div class="input-group date">
+                <span class="input-group-addon">$</span>
+                @Html.EditorFor(m => m.securedValue, new { htmlattributes = new { @class = "form-control", value = "0" } })
+            </div>
+            @Html.ValidationMessageFor(m => m.securedValue, null, new { @class = "help-block" })
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.LabelFor(m => m.leaseDesc)
+        </td>
+        <td>
+            <div class="input-group date">
+                <span class="input-group-addon">$</span>
+                @Html.EditorFor(m => m.leaseMonthly, new { htmlattributes = new { @class = "form-control", value = "0" } })
+            </div>
+            @Html.ValidationMessageFor(m => m.leaseMonthly, null, new { @class = "help-block" })
+        </td>
+        <td>
+            <div class="input-group date">
+                <span class="input-group-addon">$</span>
+                @Html.EditorFor(m => m.leaseValue, new { htmlattributes = new { @class = "form-control", value = "0" } })
+            </div>
+            @Html.ValidationMessageFor(m => m.leaseValue, null, new { @class = "help-block" })
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.LabelFor(m => m.autoLeaseDesc)
+        </td>
+        <td>
+            <div class="input-group date">
+                <span class="input-group-addon">$</span>
+                @Html.EditorFor(m => m.autoLeaseMonthly, new { htmlattributes = new { @class = "form-control", value = "0" } })
+            </div>
+            @Html.ValidationMessageFor(m => m.autoLeaseMonthly, null, new { @class = "help-block" })
+        </td>
+        <td>
+            <div class="input-group date">
+                <span class="input-group-addon">$</span>
+                @Html.EditorFor(m => m.autoLeaseValue, new { htmlattributes = new { @class = "form-control", value = "0" } })
+            </div>
+            @Html.ValidationMessageFor(m => m.autoLeaseValue, null, new { @class = "help-block" })
+        </td>
+    </tr>
+   
+    @*<tr>
+        <td>
+            @Html.LabelFor(m => m.liabilityTotalValue)
+        </td>
+        <td>
+            <div class="input-group date">
+                <span class="input-group-addon">$</span>
+                @Html.EditorFor(m => m.liabilityTotalMonthly, new { htmlattributes = new { @class = "form-control", value = "0" } })
+            </div>
+            @Html.ValidationMessageFor(m => m.liabilityTotalMonthly, null, new { @class = "help-block" })
+        </td>
+        <td>
+            <div class="input-group date">
+                <span class="input-group-addon">$</span>
+                @Html.EditorFor(m => m.liabilityTotalValue, new { htmlattributes = new { @class = "form-control", value = "0" } })
+            </div>
+            @Html.ValidationMessageFor(m => m.liabilityTotalValue, null, new { @class = "help-block" })
+        </td>
+    </tr>*@
+</table>
+
+@*<div class="form-group">
+    @Html.LabelFor(m => m.netWorthValue)
+    <div class="input-group date">
+        <span class="input-group-addon">$</span>
+        @Html.EditorFor(m => m.netWorthValue, new { htmlattributes = new { @class = "form-control", value = "0" } })
+    </div>
+    @Html.ValidationMessageFor(m => m.netWorthValue, null, new { @class = "help-block" })
+</div>*@

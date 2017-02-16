@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:intf="http://services.axis.fxportal.hermes.filogix.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns1="http://packaging.common.hermes.filogix.com" xmlns:impl="http://services.axis.fxportal.hermes.filogix.com" targetNamespace="http://services.axis.fxportal.hermes.filogix.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://packaging.common.hermes.filogix.com">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:complexType name="Response">
+        <xsd:sequence>
+          <xsd:element name="messageId" nillable="true" type="xsd:string" />
+          <xsd:element name="status" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="VersionedDocument">
+        <xsd:sequence>
+          <xsd:element name="content" nillable="true" type="xsd:base64Binary" />
+          <xsd:element name="docname" nillable="true" type="xsd:string" />
+          <xsd:element name="format" nillable="true" type="xsd:string" />
+          <xsd:element name="mimetype" nillable="true" type="xsd:string" />
+          <xsd:element name="version" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfVersionedDocument">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns1:VersionedDocument" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="VersionedMessage">
+        <xsd:sequence>
+          <xsd:element name="dealId" nillable="true" type="xsd:string" />
+          <xsd:element name="documents" nillable="true" type="tns1:ArrayOfVersionedDocument" />
+          <xsd:element name="format" nillable="true" type="xsd:string" />
+          <xsd:element name="messageId" nillable="true" type="xsd:string" />
+          <xsd:element name="receiver" nillable="true" type="xsd:string" />
+          <xsd:element name="sender" nillable="true" type="xsd:string" />
+          <xsd:element name="timestamp" nillable="true" type="xsd:dateTime" />
+          <xsd:element name="transaction" nillable="true" type="xsd:string" />
+          <xsd:element name="version" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="getMessageRequest">
+    <wsdl:part name="channel" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getMessageRequest1">
+    <wsdl:part name="channel" type="xsd:string" />
+    <wsdl:part name="clientFormat" type="xsd:string" />
+    <wsdl:part name="clientVersion" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="setMessageResponse">
+    <wsdl:part name="setMessageReturn" type="tns1:Response" />
+  </wsdl:message>
+  <wsdl:message name="setMessageRequest">
+    <wsdl:part name="message" type="tns1:VersionedMessage" />
+  </wsdl:message>
+  <wsdl:message name="acknowledgeResponse" />
+  <wsdl:message name="getMessageResponse">
+    <wsdl:part name="getMessageReturn" type="tns1:VersionedMessage" />
+  </wsdl:message>
+  <wsdl:message name="getMessageResponse1">
+    <wsdl:part name="getMessageReturn" type="tns1:VersionedMessage" />
+  </wsdl:message>
+  <wsdl:message name="acknowledgeRequest">
+    <wsdl:part name="response" type="tns1:Response" />
+  </wsdl:message>
+  <wsdl:portType name="FCX">
+    <wsdl:operation name="acknowledge" parameterOrder="response">
+      <wsdl:input name="acknowledgeRequest" message="impl:acknowledgeRequest" />
+      <wsdl:output name="acknowledgeResponse" message="impl:acknowledgeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getMessage" parameterOrder="channel">
+      <wsdl:input name="getMessageRequest" message="impl:getMessageRequest" />
+      <wsdl:output name="getMessageResponse" message="impl:getMessageResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getMessage" parameterOrder="channel clientFormat clientVersion">
+      <wsdl:input name="getMessageRequest1" message="impl:getMessageRequest1" />
+      <wsdl:output name="getMessageResponse1" message="impl:getMessageResponse1" />
+    </wsdl:operation>
+    <wsdl:operation name="setMessage" parameterOrder="message">
+      <wsdl:input name="setMessageRequest" message="impl:setMessageRequest" />
+      <wsdl:output name="setMessageResponse" message="impl:setMessageResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="FCXSoapBinding" type="impl:FCX">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="acknowledge">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="acknowledgeRequest">
+        <wsdlsoap:body use="literal" namespace="http://services.axis.fxportal.hermes.filogix.com" />
+      </wsdl:input>
+      <wsdl:output name="acknowledgeResponse">
+        <wsdlsoap:body use="literal" namespace="http://services.axis.fxportal.hermes.filogix.com" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMessage">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getMessageRequest">
+        <wsdlsoap:body use="literal" namespace="http://services.axis.fxportal.hermes.filogix.com" />
+      </wsdl:input>
+      <wsdl:output name="getMessageResponse">
+        <wsdlsoap:body use="literal" namespace="http://services.axis.fxportal.hermes.filogix.com" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMessage">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getMessageRequest1">
+        <wsdlsoap:body use="literal" namespace="http://services.axis.fxportal.hermes.filogix.com" />
+      </wsdl:input>
+      <wsdl:output name="getMessageResponse1">
+        <wsdlsoap:body use="literal" namespace="http://services.axis.fxportal.hermes.filogix.com" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setMessage">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="setMessageRequest">
+        <wsdlsoap:body use="literal" namespace="http://services.axis.fxportal.hermes.filogix.com" />
+      </wsdl:input>
+      <wsdl:output name="setMessageResponse">
+        <wsdlsoap:body use="literal" namespace="http://services.axis.fxportal.hermes.filogix.com" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FCXService">
+    <wsdl:port name="FCX" binding="impl:FCXSoapBinding">
+      <wsdlsoap:address location="http://10.5.191.236:8081/fcxportal/services/FCX" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

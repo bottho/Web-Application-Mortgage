@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centum Application</title>
+    @*@Styles.Render("~/Content/css")*@
+    <link rel="stylesheet" href="~/Content/Site.css" />
+    <link rel="stylesheet" href="~/Content/bootstrap.css" />
+    <link rel="stylesheet" href="~/Content/bootstrap-datetimepicker.css" />
+    @Scripts.Render("~/bundles/modernizr")
+
+
+
+</head>
+<body>
+
+    @RenderBody()
+
+
+    @*@Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/globalization")
+        @Scripts.Render("~/bundles/jqueryval")
+        @Scripts.Render("~/bundles/bootstrap")*@
+
+    <script src="/Scripts/jquery-1.10.2.js"></script>
+
+    <script src="/Scripts/cldr.js"></script>
+    <script src="/Scripts/cldr/event.js"></script>
+    <script src="/Scripts/globalize.js"></script>
+    <script src="/Scripts/cldr/supplemental.js"></script>
+    <script src="/Scripts/globalize/number.js"></script>
+    <script src="~/Scripts/globalize/plural.js"></script>
+    <script src="/Scripts/globalize/currency.js"></script>
+    <script src="/Scripts/globalize/date.js"></script>
+
+
+    <script src="/Scripts/jquery.validate.js"></script>
+    <script src="/Scripts/jquery.validate.unobtrusive.js"></script>
+    <script src="/Scripts/jquery.validate.globalize.js"></script>
+
+
+    <script src="/Scripts/moment.js"></script>
+    <script src="/Scripts/bootstrap.js"></script>
+    <script src="/Scripts/bootstrap-datetimepicker.js"></script>
+    <script src="/Scripts/respond.js"></script>
+
+    
+    <script type="text/javascript">
+        $(function () {
+            $('[type="date"]').parent().datetimepicker({
+                format: 'YYYY-MM-DD'
+            });
+        });
+
+        $.when(
+          $.get("/scripts/cldr/supplemental/likelySubtags.json"),
+          $.get("/scripts/cldr/en-CA/numbers.json"),
+          $.get("/scripts/cldr/en-CA/currencies.json"),
+          $.get("/scripts/cldr/en-CA/ca-gregorian.json"),
+          $.get("/scripts/cldr/en-CA/dateFields.json"),
+          $.get("/scripts/cldr/supplemental/currencyData.json"),
+          $.get("/scripts/cldr/supplemental/numberingSystems.json"),
+          $.get("/scripts/cldr/supplemental/timeData.json")
+        ).then(function () {
+            return [].slice.apply(arguments, [0]).map(function (result) {
+                return result[0];
+            });
+        }).then(Globalize.load).then(function () {
+            Globalize.locale("en-CA");
+        });
+
+        $.validator.methods.number = function (value, element) {
+            if (value == "")
+            {
+                return true;
+            }
+            return !isNaN(Globalize.parseNumber(value));
+        }
+
+
+        $(document).ready(function () {
+            
+            changeCoApplicant($("#qualifiers_addCoApplicant:checked").val() == "True");
+
+            $('input[required]').parent().children('label').append('<i class="required">*</i>');
+            $('select[required]').parent().children('label').append('<i class="required">*</i>');
+            $('input.required').parent().children('label').append('<i class="required">*</i>');
+            $('select.required').parent().children('label').append('<i class="required"></i>');
+
+            $('.tab-content').children(".tab-pane").each(function (item, value) {
+                console.log($(value).children(" :input"));
+            });
+
+            //var isValid = true;
+
+            //$('#tabNav li > a').each(function (item, value) {
+            //    isValid = $($(value).attr('href') + " :input").valid();
+            //    if (!isValid) {
+            //        $($(value).attr('href')).tab("show");
+            //        $(value).removeClass("btn-success");
+            //        return false;
+            //    }
+            //    else {
+            //        $(value).addClass("btn-success");
+            //    }
+            //});
+        });
+        function changeCoApplicant(coApplicantValue) {
+            if (coApplicantValue) {
+                $("#coAplicantTab").removeClass("hidden");
+                $('#CoApplicantNext').attr('onClick', "formFlow('#Personal', '#CoApplicant')");
+                $('#CoApplicantPrevious').attr('onClick', "formFlow('#Property', '#CoApplicant')");
+                $('#CoApplicant input.required').rules("add", "required");
+            }
+            else {
+                $("#coAplicantTab").addClass("hidden");
+                $('#CoApplicantNext').attr('onClick', "formFlow('#Personal', '#Property')");
+                $('#CoApplicantPrevious').attr('onClick', "formFlow('#Property', '#Personal')");
+                $('#CoApplicant input[required]').rules("remove", "required");
+                $('#CoApplicant input[required]').rules("remove", "required");
+            }
+        }
+
+        function formFlow(currentPage, nextpage)
+        {
+            if ($(currentPage).index() > $(nextpage).index())
+            {
+                $(".nav a[href='" + nextpage + "']").tab('show');
+            }
+            else if ($(currentPage + " :input").length == 0 || $(currentPage + " :input").valid())
+            {
+                $(".nav a[href='" + nextpage + "']").tab('show');
+                $(".nav a[href='" + currentPage + "']").addClass("btn-success");
+            }
+            else
+            {
+                return false;
+            }
+
+            if(currentPage == "#Intro" && $("#sentIntro").val() == "False")
+            {
+                $.ajax({
+                    type: 'POST',
+                    url: "@Url.Action("ApplicationInitiated")",
+                    data: $("form").serialize()
+                });
+
+                $("#sentIntro").val("True");
+            }
+        }
+
+        function tabClick(clickedTab)
+        {
+            if ($('#tabNav li.active').index() > $(clickedTab).index())
+            {
+                $(clickedTab).tab('show');
+            }
+            else
+            {
+                event.stopPropagation();
+                return false;
+            }
+
+            //$('#tabNav').children('li:not(.hidden)').each(function (index, item) {
+            //    var listItem = $(item).children('a').attr('href');
+
+            //    if (!$(listItem + " input").valid()) {
+            //        $(listItem).tab('show');
+            //        event.stopImmediatePropagation();
+            //        return false;
+            //    }
+
+            //});
+        }
+
+        function submitIntroForm()
+        {
+            
+        }
+    </script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

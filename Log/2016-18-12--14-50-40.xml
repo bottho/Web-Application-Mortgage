@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:referralApplication xmlns:xs="http://www.filogix.com/Schema/FCXAPI/1">
+  <xs:referredToAgent>
+    <xs:firmCode>CNTM</xs:firmCode>
+    <xs:userLogin>TESTJ</xs:userLogin>
+  </xs:referredToAgent>
+  <xs:referralUrl>dev.centum.ca</xs:referralUrl>
+  <xs:deal>
+    <xs:applicationDate>2016-12-18T14:49:21.3311528-08:00</xs:applicationDate>
+    <xs:dealTypeDd>0</xs:dealTypeDd>
+    <xs:estimatedClosingDate>2016-12-22T00:00:00</xs:estimatedClosingDate>
+    <xs:sourceApplicationId>CNTMTESTJ201612181449213311</xs:sourceApplicationId>
+  </xs:deal>
+  <xs:applicantGroup>
+    <xs:applicantGroupTypeDd>0</xs:applicantGroupTypeDd>
+    <xs:applicant>
+      <xs:emailAddress>bryanottho@gmail.com</xs:emailAddress>
+      <xs:emailNotProvided>N</xs:emailNotProvided>
+      <xs:name>
+        <xs:salutationDd>1</xs:salutationDd>
+        <xs:firstName>Bryan</xs:firstName>
+        <xs:lastName>Ottho</xs:lastName>
+      </xs:name>
+      <xs:addressDetail>
+        <xs:address>
+          <xs:streetNumber>123</xs:streetNumber>
+          <xs:streetName>Abbott</xs:streetName>
+          <xs:city>Vancouver</xs:city>
+          <xs:provinceDd>2</xs:provinceDd>
+          <xs:internationalPostalCode>V6B 0J2</xs:internationalPostalCode>
+          <xs:postalFsa>V62</xs:postalFsa>
+          <xs:postalLdu>0J2</xs:postalLdu>
+          <xs:countryTypeDd>1</xs:countryTypeDd>
+        </xs:address>
+        <xs:addressTypeDd>0</xs:addressTypeDd>
+      </xs:addressDetail>
+      <xs:employmentHistory>
+        <xs:employerName>Bryan Ottho</xs:employerName>
+        <xs:employmentHistoryStatusDd>0</xs:employmentHistoryStatusDd>
+        <xs:income>
+          <xs:incomeAmount>0</xs:incomeAmount>
+          <xs:incomePeriodDd>0</xs:incomePeriodDd>
+          <xs:incomeTypeDd>0</xs:incomeTypeDd>
+        </xs:income>
+        <xs:occupationDd>1</xs:occupationDd>
+      </xs:employmentHistory>
+    </xs:applicant>
+  </xs:applicantGroup>
+  <xs:mortgage>
+    <xs:netLoanAmount>0</xs:netLoanAmount>
+    <xs:rate />
+  </xs:mortgage>
+  <xs:subjectProperty>
+    <xs:property>
+      <xs:address>
+        <xs:streetNumber>100</xs:streetNumber>
+        <xs:streetName>2nd Street</xs:streetName>
+        <xs:city>Vancouver</xs:city>
+        <xs:provinceDd>2</xs:provinceDd>
+        <xs:internationalPostalCode>V6B 0J2</xs:internationalPostalCode>
+        <xs:postalFsa>V62</xs:postalFsa>
+        <xs:postalLdu>0J2</xs:postalLdu>
+        <xs:countryTypeDd>1</xs:countryTypeDd>
+      </xs:address>
+    </xs:property>
+  </xs:subjectProperty>
+</xs:referralApplication>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://198.71.58.169/centumdata/centumwebservice.asmx?wsdl" docRef="http://198.71.58.169/centumdata/centumwebservice.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://198.71.58.169/centumdata/centumwebservice.asmx" xmlns:q1="http://centum.ca/webservices" binding="q1:CentumWebServiceSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://198.71.58.169/centumdata/centumwebservice.asmx" xmlns:q2="http://centum.ca/webservices" binding="q2:CentumWebServiceSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

@@ -1,0 +1,89 @@
+﻿body {
+	max-width: 1000px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.container {
+	padding-bottom: 80px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+.field-validation-error {
+    color: #b94a48;
+    display: inline-block;
+    *display: inline;
+    padding-left: 5px;
+    vertical-align: middle;
+    *zoom: 1;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border-color: #a94442 !important;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075) !important;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075) !important;
+}
+
+.input-validation-error:focus {
+  border-color: #953b39 !important;
+  -webkit-box-shadow: 0 0 6px #d59392 !important;
+  -moz-box-shadow: 0 0 6px #d59392 !important;
+  box-shadow: 0 0 6px #d59392 !important;
+}
+
+.validation-summary-errors {
+    /*font-weight: bold;*/
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+.required {
+  content:"*";color:red;
+}
+
+label {
+	font-weight: normal; font-size: 13px;
+}
+
+.help-block {
+	font-size: 12px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	height: 4px;
+	line-height: 14px;
+}
+
+h3, h4 {
+  margin-top: 0px !important;
+}
+
+@media (min-width: 768px) {
+	.sidebar {
+	  	max-width: 170px;
+	}
+}
+
+.input-lg {
+	height: 100px;
+}

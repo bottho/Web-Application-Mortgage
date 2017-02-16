@@ -1,0 +1,83 @@
+﻿@model CentumWebApplication.Models.FormViewModel
+
+
+
+
+<div class="tab-content">
+    <div id="Intro" class="tab-pane active">
+        <h3>@Resources.MenuInterface.introduction</h3>
+        <div class="btn-group" role="group" aria-label="...">
+            @Html.ActionLink("English", "SetCulture", new { culture = "en-CA", firmcode = Model.firmCode, username = Model.userName, url = Model.url }, new { @class = "btn btn-default", role = "button", onclick = "return confirm('By changing the language you will reset the form, is this OK?')" })
+            @Html.ActionLink("French", "SetCulture", new { culture = "fr-CA", firmcode = Model.firmCode, username = Model.userName, url = Model.url }, new { @class = "btn btn-default", role = "button", onclick = "return confirm('By changing the language you will reset the form, is this OK?')" })
+        </div>
+        <div class="clearfix"></div>
+        @Html.EditorFor(m => m.applicant, "FormPersonalInfoIntro")
+
+        @if (Model.isSask)
+        {
+            <div class="form-group col-sm-12 checkbox">
+                @Html.ValidationMessageFor(m => m.isSaskAcknowledged)<br />
+                <label>@Html.EditorFor(m => m.isSaskAcknowledged, new { htmlattributes = new { required = "required" } })I hereby acknowledge that I have received a copy of the <a href="http://www.centum.ca/Brokers/Centum/CCMD-Initial-Disclosure-Statement.pdf" target="_blank">Initial Disclosure Form.</a></label>
+            </div>
+        }
+        <div class="clearfix"></div>
+        <a href="#Qualifiers" aria-label="@Resources.MenuInterface.next" class="btn btn-block btn-primary" role="button" onclick="formFlow('#Intro', '#Qualifiers')">@Resources.MenuInterface.next</a>
+    </div>
+    <div id="Qualifiers" class="tab-pane">
+        <h3>Qualifiers</h3>
+        @Html.EditorFor(m => m.qualifiers, "FormQualifiers")
+        <div class="clearfix"></div>
+        <div class="btn-group btn-block">
+            <a href="#Intro" aria-label="@Resources.MenuInterface.previous" class="btn btn-primary col-xs-6 col-md-5" role="button" onclick="formFlow('#Qualifiers', '#Intro')">@Resources.MenuInterface.previous</a>
+            <a href="#Personal" aria-label="@Resources.MenuInterface.next" class="btn btn-primary col-xs-6 col-md-5" role="button" onclick="formFlow('#Qualifiers', '#Personal')">@Resources.MenuInterface.next</a>
+        </div>
+    </div>
+
+    <div id="Personal" class="tab-pane">
+        <h3>@Resources.MenuInterface.qualifiers</h3>
+        @Html.EditorFor(m => m.applicant, "FormPersonalInfoSecondary")
+        <div class="clearfix"></div>
+        <div class="btn-group btn-block">
+            <a href="#Qualifiers" aria-label="@Resources.MenuInterface.previous" class="btn btn-primary col-xs-6 col-md-5" role="button" onclick="formFlow('#Personal', '#Qualifiers')">@Resources.MenuInterface.previous</a>
+            <a id="CoApplicantNext" href="#CoApplicant" aria-label="@Resources.MenuInterface.next" class="btn btn-primary col-xs-6 col-md-5" role="button" onclick="formFlow('#Personal', '#Property')">@Resources.MenuInterface.next</a>
+        </div>
+    </div>
+
+    <div id="CoApplicant" class="tab-pane">
+        <h3>@Resources.MenuInterface.coApplicant</h3>
+        @Html.EditorFor(m => m.coApplicant, "FormPersonalInfo")
+        <div class="clearfix"></div>
+        <div class="btn-group btn-block">
+            <a href="#Personal" aria-label="Previous" class="btn btn-primary col-xs-6 col-md-5" role="button" onclick="formFlow('#CoApplicant', '#Personal')">@Resources.MenuInterface.previous</a>
+            <a href="#Property" aria-label="@Resources.MenuInterface.next" class="btn btn-primary col-xs-6 col-md-5" role="button" onclick="formFlow('#CoApplicant', '#Property')">@Resources.MenuInterface.next</a>
+        </div>
+    </div>
+
+    <div id="Property" class="tab-pane">
+        <h3>@Resources.MenuInterface.propertyInfo</h3>
+        @Html.EditorFor(m => m.property, "FormProperty")
+        <div class="clearfix"></div>
+        <div class="btn-group btn-block">
+            <a id="CoApplicantPrevious" href="#CoApplicant" aria-label="Previous" class="btn btn-primary col-xs-6 col-md-5" role="button" onclick="formFlow('#Property', '#Personal')">@Resources.MenuInterface.previous</a>
+            <a href="#Financial" aria-label="@Resources.MenuInterface.next" class="btn btn-primary col-xs-6 col-md-5" role="button" onclick="formFlow('#Property', '#Financial')">@Resources.MenuInterface.next</a>
+        </div>
+    </div>
+
+    <div id="Financial" class="tab-pane">
+        <h3>@Resources.MenuInterface.financialInfo</h3>
+        @Html.EditorFor(m => m.financial, "FormFinancial")
+        <div class="clearfix"></div>
+        <div class="btn-group btn-block">
+            <a href="#Property" aria-label="Previous" class="btn btn-primary col-xs-6 col-md-5" role="button" onclick="formFlow('#Financial', '#Property')">@Resources.MenuInterface.previous</a>
+            <a href="#Misc" aria-label="@Resources.MenuInterface.next" class="btn btn-primary col-xs-6 col-md-5" role="button" onclick="formFlow('#Financial', '#Misc')">@Resources.MenuInterface.next</a>
+        </div>
+    </div>
+
+    <div id="Misc" class="tab-pane">
+        <h3>@Resources.MenuInterface.miscInfo</h3>
+        @Html.EditorFor(m => m.misc, "FormMisc")
+        <div class="clearfix"></div>
+        <button type="submit" class="btn btn-block btn-primary">Submit</button>
+    </div>
+    <div class="clearfix"></div>
+</div>

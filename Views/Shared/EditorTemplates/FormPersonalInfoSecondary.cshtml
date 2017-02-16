@@ -1,0 +1,44 @@
+﻿@model CentumWebApplication.Models.FormPersonalInfo
+
+<div class="form-group col-sm-2">
+    @Html.LabelFor(m => m.sin)
+    @Html.EditorFor(m => m.sin, new { htmlattributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(m => m.sin, null, new { @class = "help-block" })
+</div>
+
+<div class="form-group col-sm-4">
+    @Html.LabelFor(m => m.dateOfBirth)
+    <div class="input-group">
+        @Html.EditorFor(m => m.dateOfBirth, new { htmlattributes = new { @class = "form-control" } })
+        <span class="input-group-addon">
+            <span class="glyphicon glyphicon-calendar"></span>
+        </span>
+    </div>
+    @Html.ValidationMessageFor(m => m.dateOfBirth, null, new { @class = "help-block" })
+</div>
+
+<div class="form-group col-sm-3">
+    @Html.LabelFor(m => m.residentialStatus)
+    @Html.DropDownListFor(m => m.residentialStatus, Model.residentialStatusTypes, new { @class = "form-control" })
+    @Html.ValidationMessageFor(m => m.residentialStatus, null, new { @class = "help-block" })
+</div>
+
+<div class="form-group col-sm-3">
+    @Html.LabelFor(m => m.monthlyRent)
+    @Html.EditorFor(m => m.monthlyRent, new { htmlattributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(m => m.monthlyRent, null, new { @class = "help-block" })
+</div>
+
+<div class="col-sm-12"><h4>Current Address</h4></div>
+@Html.EditorFor(m => m.currentAddress, "FormAddress")
+
+<div class="clearfix"></div>
+
+<div class="col-sm-12"><h4>Present Employer</h4></div>
+@Html.EditorFor(m => m.employer, "FormEmployer")
+
+<div class="form-group col-sm-4">
+    @Html.LabelFor(m => m.workPhone)
+    @Html.EditorFor(m => m.workPhone, new { htmlattributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(m => m.workPhone, null, new { @class = "help-block" })
+</div>

@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="address1" xml:space="preserve">
+    <value>Address Line 1</value>
+  </data>
+  <data name="address2" xml:space="preserve">
+    <value>Address Line 2</value>
+  </data>
+  <data name="albertaSelect" xml:space="preserve">
+    <value>Alberta</value>
+  </data>
+  <data name="allee" xml:space="preserve">
+    <value>Allée</value>
+  </data>
+  <data name="autoroute" xml:space="preserve">
+    <value>Autoroute</value>
+  </data>
+  <data name="avenue" xml:space="preserve">
+    <value>Avenue</value>
+  </data>
+  <data name="boulevard" xml:space="preserve">
+    <value>Boulevard</value>
+  </data>
+  <data name="britishColumbiaSelect" xml:space="preserve">
+    <value>British Columbia</value>
+  </data>
+  <data name="carrefour" xml:space="preserve">
+    <value>Carrefour</value>
+  </data>
+  <data name="centre" xml:space="preserve">
+    <value>Centre</value>
+  </data>
+  <data name="cercle" xml:space="preserve">
+    <value>Cercle</value>
+  </data>
+  <data name="chemin" xml:space="preserve">
+    <value>Chemin</value>
+  </data>
+  <data name="circle" xml:space="preserve">
+    <value>Circle</value>
+  </data>
+  <data name="circuit" xml:space="preserve">
+    <value>Circuit</value>
+  </data>
+  <data name="city" xml:space="preserve">
+    <value>City/Town:</value>
+  </data>
+  <data name="cote" xml:space="preserve">
+    <value>Côte</value>
+  </data>
+  <data name="cour" xml:space="preserve">
+    <value>Cour</value>
+  </data>
+  <data name="cours" xml:space="preserve">
+    <value>Cours</value>
+  </data>
+  <data name="court" xml:space="preserve">
+    <value>Court</value>
+  </data>
+  <data name="crescent" xml:space="preserve">
+    <value>Crescent</value>
+  </data>
+  <data name="croissant" xml:space="preserve">
+    <value>Croissant</value>
+  </data>
+  <data name="drive" xml:space="preserve">
+    <value>Drive</value>
+  </data>
+  <data name="east" xml:space="preserve">
+    <value>East</value>
+  </data>
+  <data name="echangeur" xml:space="preserve">
+    <value>Échangeur</value>
+  </data>
+  <data name="gate" xml:space="preserve">
+    <value>Gate</value>
+  </data>
+  <data name="ile" xml:space="preserve">
+    <value>Île</value>
+  </data>
+  <data name="impasse" xml:space="preserve">
+    <value>Impasse</value>
+  </data>
+  <data name="lane" xml:space="preserve">
+    <value>Lane</value>
+  </data>
+  <data name="manitobaSelect" xml:space="preserve">
+    <value>Manitoba</value>
+  </data>
+  <data name="montee" xml:space="preserve">
+    <value>Montée</value>
+  </data>
+  <data name="newBrunswickSelect" xml:space="preserve">
+    <value>New Brunswick</value>
+  </data>
+  <data name="newfoundlandSelect" xml:space="preserve">
+    <value>Newfoundland and Labrador</value>
+  </data>
+  <data name="none" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="north" xml:space="preserve">
+    <value>North</value>
+  </data>
+  <data name="northEast" xml:space="preserve">
+    <value>North East</value>
+  </data>
+  <data name="northWest" xml:space="preserve">
+    <value>North West</value>
+  </data>
+  <data name="northwestTerritories" xml:space="preserve">
+    <value>Northwest Territories</value>
+  </data>
+  <data name="novaScotiaSelect" xml:space="preserve">
+    <value>Nova Scotia</value>
+  </data>
+  <data name="number" xml:space="preserve">
+    <value>Number:</value>
+  </data>
+  <data name="nunavutSelect" xml:space="preserve">
+    <value>Nunavut</value>
+  </data>
+  <data name="ontarioSelect" xml:space="preserve">
+    <value>Ontario</value>
+  </data>
+  <data name="place" xml:space="preserve">
+    <value>Place</value>
+  </data>
+  <data name="plateau" xml:space="preserve">
+    <value>Plateau</value>
+  </data>
+  <data name="pleaseSelect" xml:space="preserve">
+    <value>Please Select</value>
+  </data>
+  <data name="pointe" xml:space="preserve">
+    <value>Pointe</value>
+  </data>
+  <data name="postalCode" xml:space="preserve">
+    <value>Postal Code:</value>
+  </data>
+  <data name="princeEdwardIslandSelect" xml:space="preserve">
+    <value>Prince Edward Island</value>
+  </data>
+  <data name="promenade" xml:space="preserve">
+    <value>Promenade</value>
+  </data>
+  <data name="province" xml:space="preserve">
+    <value>Province:</value>
+  </data>
+  <data name="provinceSelect" xml:space="preserve">
+    <value>Province</value>
+  </data>
+  <data name="quai" xml:space="preserve">
+    <value>Quai</value>
+  </data>
+  <data name="quebecSelect" xml:space="preserve">
+    <value>Quebec</value>
+  </data>
+  <data name="rang" xml:space="preserve">
+    <value>Rang</value>
+  </data>
+  <data name="road" xml:space="preserve">
+    <value>Road</value>
+  </data>
+  <data name="rondpoint" xml:space="preserve">
+    <value>Rond-Point</value>
+  </data>
+  <data name="route" xml:space="preserve">
+    <value>Route</value>
+  </data>
+  <data name="rue" xml:space="preserve">
+    <value>Rue</value>
+  </data>
+  <data name="ruelle" xml:space="preserve">
+    <value>Ruelle</value>
+  </data>
+  <data name="saskatchewanSelect" xml:space="preserve">
+    <value>Saskatchewan</value>
+  </data>
+  <data name="sentier" xml:space="preserve">
+    <value>Sentier</value>
+  </data>
+  <data name="south" xml:space="preserve">
+    <value>South</value>
+  </data>
+  <data name="southEast" xml:space="preserve">
+    <value>South East</value>
+  </data>
+  <data name="southWest" xml:space="preserve">
+    <value>South West</value>
+  </data>
+  <data name="street" xml:space="preserve">
+    <value>Street</value>
+  </data>
+  <data name="streetDirection" xml:space="preserve">
+    <value>Street Direction:</value>
+  </data>
+  <data name="streetName" xml:space="preserve">
+    <value>Street Name:</value>
+  </data>
+  <data name="streetType" xml:space="preserve">
+    <value>Street Type:</value>
+  </data>
+  <data name="terrace" xml:space="preserve">
+    <value>Terrace</value>
+  </data>
+  <data name="terrasse" xml:space="preserve">
+    <value>Terrasse</value>
+  </data>
+  <data name="trail" xml:space="preserve">
+    <value>Trail</value>
+  </data>
+  <data name="unit" xml:space="preserve">
+    <value>Unit:</value>
+  </data>
+  <data name="voie" xml:space="preserve">
+    <value>Voie</value>
+  </data>
+  <data name="way" xml:space="preserve">
+    <value>Way</value>
+  </data>
+  <data name="west" xml:space="preserve">
+    <value>West</value>
+  </data>
+  <data name="yukonSelect" xml:space="preserve">
+    <value>Yukon</value>
+  </data>
+</root>

@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:referralApplication xmlns:xs="http://www.filogix.com/Schema/FCXAPI/1">
+  <xs:referredToAgent>
+    <xs:firmCode>CNTM</xs:firmCode>
+    <xs:userLogin>TESTJ</xs:userLogin>
+  </xs:referredToAgent>
+  <xs:referralUrl>dev.centum.ca</xs:referralUrl>
+  <xs:deal>
+    <xs:applicationDate>2016-12-20T12:44:16.5981419-08:00</xs:applicationDate>
+    <xs:dealPurposeDd>0</xs:dealPurposeDd>
+    <xs:dealTypeDd>0</xs:dealTypeDd>
+    <xs:estimatedClosingDate>2017-01-01T00:00:00</xs:estimatedClosingDate>
+    <xs:sourceApplicationId>CNTM201612201244165981</xs:sourceApplicationId>
+  </xs:deal>
+  <xs:applicantGroup>
+    <xs:applicantGroupTypeDd>0</xs:applicantGroupTypeDd>
+    <xs:applicant>
+      <xs:birthDate>1984-07-24</xs:birthDate>
+      <xs:emailAddress>bryanottho@gmail.com</xs:emailAddress>
+      <xs:emailNotProvided>N</xs:emailNotProvided>
+      <xs:languagePreferenceDd>0</xs:languagePreferenceDd>
+      <xs:name>
+        <xs:salutationDd>1</xs:salutationDd>
+        <xs:firstName>Bryan</xs:firstName>
+        <xs:lastName>Ottho</xs:lastName>
+      </xs:name>
+      <xs:phone>
+        <xs:phoneTypeDd>1</xs:phoneTypeDd>
+        <xs:phoneNumber>9430766</xs:phoneNumber>
+      </xs:phone>
+      <xs:phone>
+        <xs:phoneTypeDd>3</xs:phoneTypeDd>
+        <xs:phoneNumber>6049461176</xs:phoneNumber>
+      </xs:phone>
+      <xs:socialInsuranceNumber>123456789</xs:socialInsuranceNumber>
+      <xs:addressDetail>
+        <xs:address>
+          <xs:unitNumber>1199</xs:unitNumber>
+          <xs:streetNumber>123</xs:streetNumber>
+          <xs:streetName>Pender</xs:streetName>
+          <xs:streetTypeDd>374</xs:streetTypeDd>
+          <xs:streetDirectionDd>4</xs:streetDirectionDd>
+          <xs:city>Vancouver</xs:city>
+          <xs:provinceDd>2</xs:provinceDd>
+          <xs:internationalPostalCode>V6E 2R1</xs:internationalPostalCode>
+          <xs:postalFsa>V61</xs:postalFsa>
+          <xs:postalLdu>2R1</xs:postalLdu>
+          <xs:countryTypeDd>1</xs:countryTypeDd>
+        </xs:address>
+        <xs:addressTypeDd>0</xs:addressTypeDd>
+      </xs:addressDetail>
+      <xs:employmentHistory>
+        <xs:contact>
+          <xs:address>
+            <xs:addressLine1>1140 West Pender</xs:addressLine1>
+            <xs:addressLine2>1280</xs:addressLine2>
+            <xs:city>Vancouver</xs:city>
+            <xs:provinceDd>2</xs:provinceDd>
+            <xs:internationalPostalCode>V6E 0J2</xs:internationalPostalCode>
+            <xs:postalFsa>V62</xs:postalFsa>
+            <xs:postalLdu>0J2</xs:postalLdu>
+            <xs:countryTypeDd>1</xs:countryTypeDd>
+          </xs:address>
+        </xs:contact>
+        <xs:employerName>Government</xs:employerName>
+        <xs:employmentHistoryStatusDd>0</xs:employmentHistoryStatusDd>
+        <xs:income>
+          <xs:incomeAmount>50000</xs:incomeAmount>
+          <xs:incomePeriodDd>0</xs:incomePeriodDd>
+          <xs:incomeTypeDd>0</xs:incomeTypeDd>
+        </xs:income>
+        <xs:industrySectorDd>2</xs:industrySectorDd>
+        <xs:monthsOfService>14</xs:monthsOfService>
+        <xs:occupationDd>1</xs:occupationDd>
+        <xs:timeInIndustry>40</xs:timeInIndustry>
+      </xs:employmentHistory>
+      <xs:otherIncome>
+        <xs:incomeAmount>1000</xs:incomeAmount>
+        <xs:incomeDescription>Stock Market</xs:incomeDescription>
+        <xs:incomePeriodDd>0</xs:incomePeriodDd>
+        <xs:incomeTypeDd>10</xs:incomeTypeDd>
+      </xs:otherIncome>
+      <xs:asset>
+        <xs:assetDescription>Cash Savings</xs:assetDescription>
+        <xs:assetTypeDd>0</xs:assetTypeDd>
+        <xs:assetValue>100</xs:assetValue>
+      </xs:asset>
+      <xs:asset>
+        <xs:assetDescription>Deposit on property being purchased</xs:assetDescription>
+        <xs:assetTypeDd>13</xs:assetTypeDd>
+        <xs:assetValue>200</xs:assetValue>
+      </xs:asset>
+      <xs:asset>
+        <xs:assetDescription>AutoCar</xs:assetDescription>
+        <xs:assetTypeDd>4</xs:assetTypeDd>
+        <xs:assetValue>300</xs:assetValue>
+      </xs:asset>
+      <xs:asset>
+        <xs:assetDescription>Value of present home</xs:assetDescription>
+        <xs:assetTypeDd>11</xs:assetTypeDd>
+        <xs:assetValue>400</xs:assetValue>
+      </xs:asset>
+      <xs:asset>
+        <xs:assetDescription>Stock Portfolio</xs:assetDescription>
+        <xs:assetTypeDd>6</xs:assetTypeDd>
+        <xs:assetValue>500</xs:assetValue>
+      </xs:asset>
+      <xs:asset>
+        <xs:assetDescription>RRSP Portfolio</xs:assetDescription>
+        <xs:assetTypeDd>1</xs:assetTypeDd>
+        <xs:assetValue>600</xs:assetValue>
+      </xs:asset>
+      <xs:asset>
+        <xs:assetDescription>Other Money</xs:assetDescription>
+        <xs:assetTypeDd>8</xs:assetTypeDd>
+        <xs:assetValue>700</xs:assetValue>
+      </xs:asset>
+      <xs:liability>
+        <xs:liabilityAmount>900</xs:liabilityAmount>
+        <xs:liabilityDescription>Debt Agency</xs:liabilityDescription>
+        <xs:liabilityMonthlyPayment>1000</xs:liabilityMonthlyPayment>
+        <xs:liabilityTypeDd>3</xs:liabilityTypeDd>
+      </xs:liability>
+      <xs:liability>
+        <xs:liabilityAmount>1100</xs:liabilityAmount>
+        <xs:liabilityDescription>Credit Company</xs:liabilityDescription>
+        <xs:liabilityMonthlyPayment>1200</xs:liabilityMonthlyPayment>
+        <xs:liabilityTypeDd>2</xs:liabilityTypeDd>
+      </xs:liability>
+      <xs:liability>
+        <xs:liabilityAmount>1300</xs:liabilityAmount>
+        <xs:liabilityDescription>Car Company</xs:liabilityDescription>
+        <xs:liabilityMonthlyPayment>1400</xs:liabilityMonthlyPayment>
+        <xs:liabilityTypeDd>4</xs:liabilityTypeDd>
+      </xs:liability>
+      <xs:liability>
+        <xs:liabilityAmount>1500</xs:liabilityAmount>
+        <xs:liabilityDescription>Company Loan</xs:liabilityDescription>
+        <xs:liabilityMonthlyPayment>1600</xs:liabilityMonthlyPayment>
+        <xs:liabilityTypeDd>3</xs:liabilityTypeDd>
+      </xs:liability>
+      <xs:liability>
+        <xs:liabilityAmount>1700</xs:liabilityAmount>
+        <xs:liabilityDescription>Mortgage 1</xs:liabilityDescription>
+        <xs:liabilityMonthlyPayment>1800</xs:liabilityMonthlyPayment>
+        <xs:liabilityTypeDd>3</xs:liabilityTypeDd>
+      </xs:liability>
+      <xs:liability>
+        <xs:liabilityAmount>1900</xs:liabilityAmount>
+        <xs:liabilityDescription>Mortgage 2</xs:liabilityDescription>
+        <xs:liabilityMonthlyPayment>2000</xs:liabilityMonthlyPayment>
+        <xs:liabilityTypeDd>3</xs:liabilityTypeDd>
+      </xs:liability>
+      <xs:liability>
+        <xs:liabilityAmount>0</xs:liabilityAmount>
+        <xs:liabilityDescription>Alimony</xs:liabilityDescription>
+        <xs:liabilityMonthlyPayment>2100</xs:liabilityMonthlyPayment>
+        <xs:liabilityTypeDd>5</xs:liabilityTypeDd>
+      </xs:liability>
+    </xs:applicant>
+    <xs:applicant>
+      <xs:birthDate>1982-03-17</xs:birthDate>
+      <xs:emailAddress>scottloader@uniglobe.ca</xs:emailAddress>
+      <xs:emailNotProvided>N</xs:emailNotProvided>
+      <xs:languagePreferenceDd>0</xs:languagePreferenceDd>
+      <xs:name>
+        <xs:salutationDd>1</xs:salutationDd>
+        <xs:firstName>Scott</xs:firstName>
+        <xs:middleInitial>M</xs:middleInitial>
+        <xs:lastName>Loader</xs:lastName>
+      </xs:name>
+      <xs:phone>
+        <xs:phoneTypeDd>1</xs:phoneTypeDd>
+        <xs:phoneNumber>6042502840</xs:phoneNumber>
+      </xs:phone>
+      <xs:phone>
+        <xs:phoneTypeDd>3</xs:phoneTypeDd>
+        <xs:phoneNumber>7788338848</xs:phoneNumber>
+      </xs:phone>
+      <xs:socialInsuranceNumber>987654321</xs:socialInsuranceNumber>
+      <xs:addressDetail>
+        <xs:address>
+          <xs:unitNumber>2312</xs:unitNumber>
+          <xs:streetNumber>1280</xs:streetNumber>
+          <xs:streetName>Georgia</xs:streetName>
+          <xs:streetTypeDd>374</xs:streetTypeDd>
+          <xs:streetDirectionDd>4</xs:streetDirectionDd>
+          <xs:city>Vancouver</xs:city>
+          <xs:provinceDd>2</xs:provinceDd>
+          <xs:internationalPostalCode>V6B 0J2</xs:internationalPostalCode>
+          <xs:postalFsa>V62</xs:postalFsa>
+          <xs:postalLdu>0J2</xs:postalLdu>
+          <xs:countryTypeDd>1</xs:countryTypeDd>
+        </xs:address>
+        <xs:addressTypeDd>0</xs:addressTypeDd>
+      </xs:addressDetail>
+      <xs:employmentHistory>
+        <xs:contact>
+          <xs:address>
+            <xs:addressLine1>1199 West Pender</xs:addressLine1>
+            <xs:addressLine2>#900</xs:addressLine2>
+            <xs:city>Vancouver</xs:city>
+            <xs:provinceDd>2</xs:provinceDd>
+            <xs:internationalPostalCode>V6E 2R1</xs:internationalPostalCode>
+            <xs:postalFsa>V61</xs:postalFsa>
+            <xs:postalLdu>2R1</xs:postalLdu>
+            <xs:countryTypeDd>1</xs:countryTypeDd>
+          </xs:address>
+        </xs:contact>
+        <xs:employerName>Uniglobe</xs:employerName>
+        <xs:employmentHistoryStatusDd>0</xs:employmentHistoryStatusDd>
+        <xs:income>
+          <xs:incomeAmount>88000</xs:incomeAmount>
+          <xs:incomePeriodDd>0</xs:incomePeriodDd>
+          <xs:incomeTypeDd>2</xs:incomeTypeDd>
+        </xs:income>
+        <xs:industrySectorDd>5</xs:industrySectorDd>
+        <xs:monthsOfService>66</xs:monthsOfService>
+        <xs:timeInIndustry>92</xs:timeInIndustry>
+      </xs:employmentHistory>
+      <xs:otherIncome>
+        <xs:incomeAmount>2000</xs:incomeAmount>
+        <xs:incomeDescription>Bake Sale</xs:incomeDescription>
+        <xs:incomePeriodDd>0</xs:incomePeriodDd>
+        <xs:incomeTypeDd>10</xs:incomeTypeDd>
+      </xs:otherIncome>
+    </xs:applicant>
+  </xs:applicantGroup>
+  <xs:mortgage>
+    <xs:netLoanAmount>100000</xs:netLoanAmount>
+    <xs:rate />
+  </xs:mortgage>
+  <xs:subjectProperty>
+    <xs:property>
+      <xs:address>
+        <xs:unitNumber>9B</xs:unitNumber>
+        <xs:streetNumber>100</xs:streetNumber>
+        <xs:streetName>Vorberg</xs:streetName>
+        <xs:streetTypeDd>374</xs:streetTypeDd>
+        <xs:streetDirectionDd>4</xs:streetDirectionDd>
+        <xs:city>Berling</xs:city>
+        <xs:provinceDd>9</xs:provinceDd>
+        <xs:internationalPostalCode>11023</xs:internationalPostalCode>
+        <xs:countryTypeDd>1</xs:countryTypeDd>
+      </xs:address>
+      <xs:dwellingStyleDd>0</xs:dwellingStyleDd>
+      <xs:dwellingTypeDd>5</xs:dwellingTypeDd>
+      <xs:garageSizeDd>3</xs:garageSizeDd>
+      <xs:garageTypeDd>1</xs:garageTypeDd>
+      <xs:livingSpace>60</xs:livingSpace>
+      <xs:livingSpaceUnitOfMeasurDd>0</xs:livingSpaceUnitOfMeasurDd>
+      <xs:lotSize>600</xs:lotSize>
+      <xs:lotSizeUnitOfMeasureDd>0</xs:lotSizeUnitOfMeasureDd>
+      <xs:occupancyTypeDd>1</xs:occupancyTypeDd>
+      <xs:structureAge>115</xs:structureAge>
+      <xs:propertyExpense>
+        <xs:propertyExpenseAmount>100</xs:propertyExpenseAmount>
+        <xs:propertyExpenseDescription>Estimated Property Taxes</xs:propertyExpenseDescription>
+        <xs:propertyExpensePeriodDd>3</xs:propertyExpensePeriodDd>
+        <xs:propertyExpenseTypeDd>0</xs:propertyExpenseTypeDd>
+      </xs:propertyExpense>
+      <xs:propertyExpense>
+        <xs:propertyExpenseAmount>300</xs:propertyExpenseAmount>
+        <xs:propertyExpenseDescription>Estimated Condo Fees</xs:propertyExpenseDescription>
+        <xs:propertyExpensePeriodDd>3</xs:propertyExpensePeriodDd>
+        <xs:propertyExpenseTypeDd>1</xs:propertyExpenseTypeDd>
+      </xs:propertyExpense>
+      <xs:propertyExpense>
+        <xs:propertyExpenseAmount>200</xs:propertyExpenseAmount>
+        <xs:propertyExpenseDescription>Estimated Monthly Heating</xs:propertyExpenseDescription>
+        <xs:propertyExpensePeriodDd>3</xs:propertyExpensePeriodDd>
+        <xs:propertyExpenseTypeDd>2</xs:propertyExpenseTypeDd>
+      </xs:propertyExpense>
+    </xs:property>
+  </xs:subjectProperty>
+</xs:referralApplication>

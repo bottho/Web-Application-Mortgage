@@ -1,0 +1,97 @@
+﻿@model CentumWebApplication.Models.FormEmployerInfo
+@{
+    bool required = Model.type == "applicant";
+}
+
+<div class="form-group col-sm-4">
+    @Html.LabelFor(m => m.occupation)
+    @if (required)
+    {
+        @Html.DropDownListFor(m => m.occupation, Model.occupationTypes, new { @class = "form-control", required = "required", min = "0" })
+    }
+    else
+    {
+        @Html.DropDownListFor(m => m.occupation, Model.occupationTypes, new { @class = "form-control required" })
+    }
+    @Html.ValidationMessageFor(m => m.occupation, null, new { @class = "help-block" })
+</div>
+
+<div class="form-group col-sm-4">
+    @Html.LabelFor(m => m.industrySector)
+    @Html.DropDownListFor(m => m.industrySector, Model.industrySectorTypes, new { @class = "form-control" })
+    @Html.ValidationMessageFor(m => m.industrySector, null, new { @class = "help-block" })
+</div>
+
+<div class="form-group col-sm-4">
+    @Html.LabelFor(m => m.employerName)
+    @if (required)
+    {
+        @Html.EditorFor(m => m.employerName, new { htmlattributes = new { @class = "form-control", required = "required" } })
+    }
+    else
+    {
+        @Html.EditorFor(m => m.employerName, new { htmlattributes = new { @class = "form-control required" } })
+    }
+    @Html.ValidationMessageFor(m => m.employerName, null, new { @class = "help-block" })
+</div>
+
+<div class="clearfix"></div>
+
+<div class="col-sm-12"><h4>Employer Address</h4></div>
+@Html.EditorFor(m => m.employerAddress, "FormEmployerAddress")
+
+<div class="form-group col-sm-6">
+    @Html.LabelFor(m => m.lengthOfEmployment)
+    @Html.EditorFor(m => m.lengthOfEmployment, new { htmlattributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(m => m.lengthOfEmployment, null, new { @class = "help-block" })
+</div>
+
+<div class="form-group col-sm-6">
+    @Html.LabelFor(m => m.yearsInBussiness)
+    @Html.EditorFor(m => m.yearsInBussiness, new { htmlattributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(m => m.yearsInBussiness, null, new { @class = "help-block" })
+</div>
+
+<div class="form-group col-sm-3">
+    @Html.LabelFor(m => m.annualIncome)
+    <div class="input-group">
+        <span class="input-group-addon">$</span>
+        @if (required)
+        {
+            @Html.EditorFor(m => m.annualIncome, new { htmlattributes = new { @class = "form-control", required = "required" } })
+        }
+        else
+        {
+            @Html.EditorFor(m => m.annualIncome, new { htmlattributes = new { @class = "form-control required" } })
+        }
+    </div>
+    @Html.ValidationMessageFor(m => m.annualIncome, null, new { @class = "help-block" })
+</div>
+
+<div class="form-group col-sm-3">
+    @Html.LabelFor(m => m.typeOfIncome)
+    @if (required)
+    {
+        @Html.DropDownListFor(m => m.typeOfIncome, Model.typeOfIncomeList, new { @class = "form-control", required = "required", min = "0" })
+    }
+    else
+    {
+        @Html.DropDownListFor(m => m.typeOfIncome, Model.typeOfIncomeList, new { @class = "form-control required" })
+    }
+    @Html.ValidationMessageFor(m => m.typeOfIncome, null, new { @class = "help-block" })
+</div>
+
+<div class="form-group col-sm-3">
+    @Html.LabelFor(m => m.otherIncomeAmount)
+    <div class="input-group">
+        <span class="input-group-addon">$</span>
+        @Html.EditorFor(m => m.otherIncomeAmount, new { htmlattributes = new { @class = "form-control" } })
+    </div>
+    @Html.ValidationMessageFor(m => m.otherIncomeAmount, null, new { @class = "help-block" })
+</div>
+
+<div class="form-group col-sm-3">
+    @Html.LabelFor(m => m.otherIncomeSource)
+    @Html.EditorFor(m => m.otherIncomeSource, new { htmlattributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(m => m.otherIncomeSource, null, new { @class = "help-block" })
+</div>
